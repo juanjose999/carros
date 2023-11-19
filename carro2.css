@@ -77,6 +77,18 @@ main {
     align-items: center;
     z-index: 100;
 }
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--color-font);
+    transition: transform 0.4s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.precio:hover {
+    transform: scale(1.2);
+}
 main .circle{
     width: 23em;
     height: 6em;
@@ -108,18 +120,6 @@ main section .marcaCarro {
     margin-top: -1.3em;
     font-weight: 100;
     font-size: 1em;
-}
-a {
-    list-style-type: none;
-    text-decoration: none;
-    color: var(--color-font);
-    transition: transform 0.4s ease-in; 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.precio:hover {
-    transform: scale(1.2);
 }
 .precio {
     font-weight: 600;
@@ -154,6 +154,7 @@ main .carroGalery .slider {
     display: flex;
     transition: transform 0.6s ease;
 }
+
 main .carroGalery img {
     border-radius: 0.3em;
     min-width: 100%;
@@ -176,7 +177,7 @@ main .carroGalery img {
 .descripcion .color {
     width: 2.8em;
     height: 2.8em;
-    background: rgb(205, 207, 203);
+    background: black;
     border-radius: 100%;
 }
 
@@ -209,8 +210,7 @@ main .carroGalery img {
     text-align: justify;
     word-spacing: 0.2em;
     text-transform: lowercase; 
-}
-footer {
+}footer {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -270,6 +270,9 @@ footer .logo-finstagram button {
     width: 4em;
     height: 4em;
 }
+.price {
+    opacity: 1;display: none;
+}
 @media (min-width: 768px) {
     .descripcion {
         display: grid;
@@ -320,7 +323,6 @@ footer .logo-finstagram button {
     }
     .subtitle2 {
         padding-left: 2em;
-        padding-top: 2em;
     }
     .texto-description {
         padding-left: -2em;
