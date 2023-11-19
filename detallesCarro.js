@@ -26,5 +26,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(nextSlide, intervalTime);
 })
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var pantallaInicio = document.getElementById("pantallaInicio");
+
+        // Verificar si es la primera vez que se abre la aplicación
+        if (localStorage.getItem("primeraVez") === null) {
+            // Mostrar la pantalla de inicio
+            pantallaInicio.style.display = "block";
+
+            // Establecer una marca en localStorage para indicar que la aplicación ya se ha abierto
+            localStorage.setItem("primeraVez", "false");
+
+            // Ocultar la pantalla de inicio después de 3 segundos
+            setTimeout(function () {
+                pantallaInicio.style.display = "none";
+            }, 3000);
+        } else {
+            // Si no es la primera vez, simplemente ocultar la pantalla de inicio
+            pantallaInicio.style.display = "none";
+        }
+    });
+
 // Agrega un listener para el evento de scroll
 
