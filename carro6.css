@@ -1,0 +1,351 @@
+:root{
+    --bg-principal: rgba(30, 30, 30, 1);
+    --color-font: rgb(225, 225, 225);
+    --padding: 2em;
+    --card-bg: rgba(66, 67, 70, 1);
+    --degradado-card: linear-gradient(to top, #787373, rgb(70, 66, 70));
+    --degradado-cuadrado: linear-gradient(to bottom, #5e5858, rgb(32, 33, 36));
+    --card-info-car: linear-gradient(to bottom, #6e6a6a, rgb(50, 52, 59));
+    --degradado-footer: linear-gradient(to bottom, #3c3b3b, rgb(32, 33, 36));
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body {
+    background: var(--bg-principal);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--color-font);
+}
+header {
+    width: 100%;
+    height: 6%;
+    display: flex;
+    padding: 0.6em 2em 0em 2em;
+}
+
+header .container-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+header .container-header .atras img {
+    width: 2.8em;
+    height: 2.8em;
+    margin-left: 0.3em;
+}
+
+.container-header button {
+    border-radius: 100%;
+    background-color: var(--bg-principal);
+    border: none;  
+}
+
+header .logo figure img {
+    width: 6em;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .buscar img {
+    width: 2.6em;
+}
+
+header .btnLupa {
+    background-color: var(--bg-principal);
+    border-radius: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.3em;
+    height: 3.3em;
+}
+button .btnLupa{
+    width: 100%;
+    height: 100%;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+main .circle{
+    width: 23em;
+    height: 6em;
+    background: rgb(61, 59, 59);
+    border-radius: 100%;
+    margin-top: -13em;
+    border-right: 2px rgb(175, 174, 174) solid;
+    border-bottom: 2px rgb(175, 174, 174) solid;
+    z-index: 100;
+}
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--color-font);
+    transition: transform 0.4s ease-in;
+}
+.precio:hover {
+    transform: scale(1.2);
+}
+main .cuadrado {
+    z-index: -1;
+    height: 10em;
+    background: var(--degradado-cuadrado);
+    margin-top: -3em;
+}
+main section .marcaCarro .marcaCarroPrincipal{
+    font-weight: 700;
+    font-size: 1.8em;
+    display: flex;
+    align-items: flex-start;
+}
+main section .marcaCarro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 8em;
+    margin-top: -1.3em;
+    font-weight: 100;
+    font-size: 1em;
+}
+.precio {
+    font-weight: 600;
+    background: rgb(61, 58, 58);
+    border-radius: 0.3em;
+    padding: 0.3em;
+    font-size: 2em;
+    border-top: 2px gray solid;
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -0.5em;
+}
+.precio {
+    position: relative;
+}
+
+
+button .info-carro .precio {
+    padding: 0.3em;
+}
+
+
+main .carroGalery {
+    overflow: hidden;
+    width: 100%;
+}
+
+main .carroGalery .slider {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+main .carroGalery {
+    padding: 0em 2em 1.6em 2em;
+}
+
+main .carroGalery img {
+    border-radius: 0.3em;
+    min-width: 100%;
+    height: auto;
+}
+.subtitle {
+    padding-left: 2em;
+}
+.subtitle h3 {
+    font-weight: 600;
+}
+.descripcion{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6em;
+    padding: 1.8em;
+}
+.descripcion .color {
+    width: 2.8em;
+    height: 2.8em;
+    background: rgb(228, 230, 225);
+    border-radius: 100%;
+}
+
+.descripcion article {
+    border-radius: 0.6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--card-info-car);
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    font-weight: 600;
+}
+
+.descripcion article figure img {
+    width: 3em;
+    height: 3em;
+}
+.descripcion article figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.descripcion-carro {
+    padding: 0.8em 2em 0em 2em;
+}
+.texto-description {
+    text-align: justify;
+    word-spacing: 0.2em;
+    text-transform: lowercase; 
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding-top:3em;
+    padding-bottom: 2em;
+}
+.container-footer {
+    padding: 0em 2em 2em 2em;
+    width: 100%;
+    height: 100%;
+    background: var(--degradado-footer);
+}
+footer .mensaje-salida{
+    display: flex;
+    justify-content: center;
+}
+footer .text {
+    margin-top: -1em;
+    font-weight: 700;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redes {
+    padding-top:  2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .contactanos-fb img {
+    width: 4em;
+    height: 4em;
+    display: flex;
+}
+footer .contactanos-fb button{
+    border-radius: 0.6em;
+}
+footer .contactanos-wp button {
+    border-radius: 0.6em;
+    width: 4.3em;
+    height: 4.3em;
+}
+footer .contactanos-wp button img {
+    border-radius: 0.6em;
+    width: 3.3em;
+    height: 3.3em;
+}
+footer .logo-finstagram button {
+    border-radius: 0.6em;
+    width: 4.3em;
+    height: 4.3em;
+}
+.contactanos-fb .insta img {
+    width: 4em;
+    height: 4em;
+}
+@media (min-width: 768px) {
+    header {
+        padding: 1.6em 2em;
+    }
+
+    header .container-header {
+        flex-direction: row;
+    }
+
+    header .container-header .atras img {
+        width: 2.8em;
+        height: 2.8em;
+        margin-left: 0.3em;
+    }
+
+    header .logo figure img {
+        width: 8em;
+    }
+
+    main .circle {
+        width: 30em;
+        height: 8em;
+        margin-top: -18em;
+    }
+
+    main .cuadrado {
+        height: 15em;
+        margin-top: -6em;
+    }
+
+    main section .marcaCarro {
+        height: 10em;
+        margin-top: -2em;
+        font-size: 1.5em;
+    }
+
+    main .precio {
+        font-size: 3em;
+        height: 3em;
+        margin-top: -1em;
+    }
+
+    main .carroGalery {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    main .descripcion {
+        padding: 1.8em 4em;
+    }
+
+    .descripcion article {
+        width: 80%;
+    }
+
+    .descripcion-carro {
+        padding: 1.2em 4em;
+    }
+
+    footer .text {
+        font-size: 1.8em;
+    }
+
+    footer .redes {
+        padding-top: 3em;
+    }
+
+    footer .contactanos-fb img,
+    footer .contactanos-wp button img {
+        width: 5em;
+        height: 5em;
+    }
+
+    footer .logo-finstagram button {
+        width: 5em;
+        height: 5em;
+    }
+}
